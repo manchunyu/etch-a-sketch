@@ -15,6 +15,7 @@ resetButton.addEventListener('click', () => {
     setGrids(newGridNumber);
 });
 
+
 function setGrids(numberOfGrid) {
     for (let i = 0; i < numberOfGrid; i++){
         const rowdiv = document.createElement('div');
@@ -28,8 +29,9 @@ function setGrids(numberOfGrid) {
     }
 
     container.addEventListener('mouseover', event => {
-        let color = setColor();
-        event.target.style.backgroundColor = `#${color['red']}${color['green']}${color['blue']}`;
+        const target = event.target;
+        const color = setColor();
+        target.style.backgroundColor = `#${color['red']}${color['green']}${color['blue']}`;
     });
 }
 function setColor() {
