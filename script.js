@@ -4,7 +4,6 @@ const resetButton = document.getElementById('reset')
 resetButton.addEventListener('click', () => {
 
     let newGridNumber = 0;
-    
     do {
         newGridNumber = prompt('Number?');
     } while (newGridNumber > 100);
@@ -29,8 +28,29 @@ function setGrids(numberOfGrid) {
     }
 
     container.addEventListener('mouseover', event => {
-        event.target.style.backgroundColor = 'black';
+        let color = setColor();
+        event.target.style.backgroundColor = `#${color['red']}${color['green']}${color['blue']}`;
     });
 }
+function setColor() {
+    const MAX = 0xFF;
 
+    let rgbScheme = {
+        'red': 0,
+        'blue': 0,
+        'green': 0,
+    }
+
+    let setRandInt = (n) => {
+        return Math.floor(Math.random() * n);
+    }
+
+    for (const color in rgbScheme){
+        rgbScheme[color] = setRandInt(MAX).toString(16);
+    }
+    console.log(rgbScheme);
+    return rgbScheme;
+}
 setGrids(16);
+setColor()
+
