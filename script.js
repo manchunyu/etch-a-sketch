@@ -6,7 +6,7 @@ resetButton.addEventListener('click', () => {
     let newGridNumber = 0;
     do {
         newGridNumber = prompt('Number?');
-    } while (newGridNumber > 100);
+    } while (newGridNumber > 100 || newGridNumber <= 0);
 
     const rowdivs = document.querySelectorAll('.rowdiv');
     for (const rowdiv of rowdivs){
@@ -48,9 +48,7 @@ function setColor() {
     for (const color in rgbScheme){
         rgbScheme[color] = setRandInt(MAX).toString(16);
     }
-    console.log(rgbScheme);
     return rgbScheme;
 }
 setGrids(16);
-setColor()
 
