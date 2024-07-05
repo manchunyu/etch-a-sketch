@@ -1,16 +1,32 @@
-* {
+*{
     box-sizing: border-box;
 }
-
 body {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    border: solid;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+.rowdiv {
+    display: flex;
+    min-height: auto;
+    min-width: auto;
+    flex:auto;
 }
 
 .grid {
     border: solid;
+    min-height: auto;
+    min-width: auto;
+    flex:auto;
 }
