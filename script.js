@@ -1,4 +1,4 @@
-const numberOfGrid = 5 ;
+let numberOfGrid = 16;
 const container = document.querySelector('.container');
 
 
@@ -13,6 +13,8 @@ for (let i = 0; i < numberOfGrid; i++){
     container.appendChild(rowdiv);
 }
 
+
 container.addEventListener('mouseover', event => {
     event.target.style.backgroundColor = 'black';
-})
+      
+});

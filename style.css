@@ -12,7 +12,6 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border: solid;
     min-width: 500px;
     min-height: 500px;
 }
@@ -26,6 +25,7 @@ body {
 
 .grid {
     border: solid;
+    border-width: 1px;  
     min-height: auto;
     min-width: auto;
     flex:auto;
